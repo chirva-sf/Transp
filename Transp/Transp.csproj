@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{34154985-B5FB-4588-82C0-31CB7C1C995A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Transp</RootNamespace>
+    <AssemblyName>Transp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>car.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.Excel, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Word, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClControls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClExcel.cs" />
+    <Compile Include="ClFunc.cs" />
+    <Compile Include="ClSQL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClWord.cs" />
+    <Compile Include="Departments_Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Departments_Item.Designer.cs">
+      <DependentUpon>Departments_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Departments_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Departments_List.Designer.cs">
+      <DependentUpon>Departments_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drivers_Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drivers_Item.Designer.cs">
+      <DependentUpon>Drivers_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drivers_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drivers_List.Designer.cs">
+      <DependentUpon>Drivers_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstStart.Designer.cs">
+      <DependentUpon>FirstStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuelCards_Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuelCards_Item.Designer.cs">
+      <DependentUpon>FuelCards_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuelCards_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuelCards_List.Designer.cs">
+      <DependentUpon>FuelCards_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FuelTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuelTypes.Designer.cs">
+      <DependentUpon>FuelTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prDocCarsIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prDocCarsIn.Designer.cs">
+      <DependentUpon>prDocCarsIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prDocCarsTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prDocCarsTO.Designer.cs">
+      <DependentUpon>prDocCarsTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prDocDrvCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prDocDrvCar.Designer.cs">
+      <DependentUpon>prDocDrvCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prDocFcDrv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prDocFcDrv.Designer.cs">
+      <DependentUpon>prDocFcDrv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prDocFSupl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prDocFSupl.Designer.cs">
+      <DependentUpon>prDocFSupl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prDocRasxod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prDocRasxod.Designer.cs">
+      <DependentUpon>prDocRasxod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prDocSigns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prDocSigns.Designer.cs">
+      <DependentUpon>prDocSigns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prDocFuelPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prDocFuelPrice.Designer.cs">
+      <DependentUpon>prDocFuelPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PutList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PutList.Designer.cs">
+      <DependentUpon>PutList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PutList_pr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PutList_pr.Designer.cs">
+      <DependentUpon>PutList_pr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepDriversTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepDriversTime.Designer.cs">
+      <DependentUpon>RepDriversTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepFuelCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepFuelCards.Designer.cs">
+      <DependentUpon>RepFuelCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepMarshrut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepMarshrut.Designer.cs">
+      <DependentUpon>RepMarshrut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepPasportTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepPasportTS.Designer.cs">
+      <DependentUpon>RepPasportTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepPlanEkspl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepPlanEkspl.Designer.cs">
+      <DependentUpon>RepPlanEkspl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepPlanTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepPlanTO.Designer.cs">
+      <DependentUpon>RepPlanTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepTranspNalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepTranspNalog.Designer.cs">
+      <DependentUpon>RepTranspNalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepVedomost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepVedomost.Designer.cs">
+      <DependentUpon>RepVedomost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepZagrOkrSr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepZagrOkrSr.Designer.cs">
+      <DependentUpon>RepZagrOkrSr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RusNumber.cs" />
+    <Compile Include="SplashFrmWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashFrmWait.Designer.cs">
+      <DependentUpon>SplashFrmWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TranspSr_Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TranspSr_Item.Designer.cs">
+      <DependentUpon>TranspSr_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TranspSr_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TranspSr_List.Designer.cs">
+      <DependentUpon>TranspSr_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users_Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users_Item.Designer.cs">
+      <DependentUpon>Users_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users_List.Designer.cs">
+      <DependentUpon>Users_List.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Departments_Item.resx">
+      <DependentUpon>Departments_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Departments_List.resx">
+      <DependentUpon>Departments_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drivers_Item.resx">
+      <DependentUpon>Drivers_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drivers_List.resx">
+      <DependentUpon>Drivers_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstStart.resx">
+      <DependentUpon>FirstStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuelCards_Item.resx">
+      <DependentUpon>FuelCards_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuelCards_List.resx">
+      <DependentUpon>FuelCards_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuelTypes.resx">
+      <DependentUpon>FuelTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prDocCarsIn.resx">
+      <DependentUpon>prDocCarsIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prDocCarsTO.resx">
+      <DependentUpon>prDocCarsTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prDocDrvCar.resx">
+      <DependentUpon>prDocDrvCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prDocFcDrv.resx">
+      <DependentUpon>prDocFcDrv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prDocFSupl.resx">
+      <DependentUpon>prDocFSupl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prDocRasxod.resx">
+      <DependentUpon>prDocRasxod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prDocSigns.resx">
+      <DependentUpon>prDocSigns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prDocFuelPrice.resx">
+      <DependentUpon>prDocFuelPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PutList.resx">
+      <DependentUpon>PutList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PutList_pr.resx">
+      <DependentUpon>PutList_pr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepDriversTime.resx">
+      <DependentUpon>RepDriversTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepFuelCards.resx">
+      <DependentUpon>RepFuelCards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepMarshrut.resx">
+      <DependentUpon>RepMarshrut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepPasportTS.resx">
+      <DependentUpon>RepPasportTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepPlanEkspl.resx">
+      <DependentUpon>RepPlanEkspl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepPlanTO.resx">
+      <DependentUpon>RepPlanTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepTranspNalog.resx">
+      <DependentUpon>RepTranspNalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepVedomost.resx">
+      <DependentUpon>RepVedomost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepZagrOkrSr.resx">
+      <DependentUpon>RepZagrOkrSr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashFrmWait.resx">
+      <DependentUpon>SplashFrmWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranspSr_Item.resx">
+      <DependentUpon>TranspSr_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranspSr_List.resx">
+      <DependentUpon>TranspSr_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users_Item.resx">
+      <DependentUpon>Users_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users_List.resx">
+      <DependentUpon>Users_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Erase.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modify.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="car.ico" />
+    <None Include="Resources\SplScr4.gif" />
+    <None Include="Resources\Refresh.png" />
+    <None Include="Resources\Refresh.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
